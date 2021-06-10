@@ -19,6 +19,13 @@ resource "aws_elb" "service" {
     ssl_certificate_id = var.service_certificate_arn
   }
 
+  listener {
+    instance_port = var.service_port
+    instance_protocol = "http"
+    lb_port = 80
+    lb_protocol = "http"
+  }
+
   health_check {
     healthy_threshold = 2
     unhealthy_threshold = 2
