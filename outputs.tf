@@ -13,10 +13,10 @@ output "dns_name" {
   value = aws_elb.service.dns_name
 }
 
-output "address" {
-  description = "The name of the service DNS record."
-  value = "${var.component}-${var.deployment_identifier}.${var.domain_name}"
-}
+#output "address" {
+#  description = "The name of the service DNS record."
+#  value = "${var.component}-${var.deployment_identifier}.${var.domain_name}"
+#}
 
 output "security_group_id" {
   description = "The ID of the security group associated with the ELB."
