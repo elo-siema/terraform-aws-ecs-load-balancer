@@ -3,10 +3,10 @@ output "name" {
   value = aws_elb.service.name
 }
 
-output "zone_id" {
-  description = "The zone ID of the created ELB."
-  value = aws_elb.service.zone_id
-}
+#output "zone_id" {
+#  description = "The zone ID of the created ELB."
+#  value = aws_elb.service.zone_id
+#}
 
 output "dns_name" {
   description = "The DNS name of the created ELB."
